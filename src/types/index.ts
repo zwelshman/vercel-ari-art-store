@@ -1,7 +1,8 @@
-import { LicenseType, SubscriptionTier, OrderStatus, TransactionType } from "@prisma/client";
-
-// Re-export Prisma enums
-export { LicenseType, SubscriptionTier, OrderStatus, TransactionType };
+// Define enums locally instead of importing from Prisma (for client-side compatibility)
+export type LicenseType = "PERSONAL" | "COMMERCIAL" | "EXCLUSIVE" | "EXTENDED";
+export type SubscriptionTier = "FREE" | "BASIC" | "PRO" | "COMMERCIAL";
+export type OrderStatus = "PENDING" | "PAID" | "PROCESSING" | "SHIPPED" | "DELIVERED" | "CANCELLED" | "REFUNDED";
+export type TransactionType = "SUBSCRIPTION" | "CREDIT_PURCHASE" | "ARTWORK_SALE" | "ARTWORK_PURCHASE" | "PRINT_ORDER" | "API_USAGE" | "REFUND";
 
 // Generation Types
 export interface GenerationParams {
