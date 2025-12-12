@@ -1,9 +1,8 @@
 import Stripe from "stripe";
-import { SUBSCRIPTION_PLANS, LICENSE_PRICES, PRINT_SIZES, PRINT_MATERIALS } from "@/types";
-import { LicenseType } from "@prisma/client";
+import { SUBSCRIPTION_PLANS, LICENSE_PRICES, PRINT_SIZES, PRINT_MATERIALS, LicenseType } from "@/types";
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2024-12-18.acacia",
+  apiVersion: "2024-11-20.acacia",
 });
 
 // Create checkout session for subscription
